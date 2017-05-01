@@ -1,0 +1,36 @@
+Arguments: 
+  /usr/local/Cellar/node/7.9.0/bin/node /usr/local/bin/yarn add --dev nodemon
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+
+Yarn version: 
+  0.23.2
+
+Node version: 
+  7.9.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "boxsiteapi",
+    "version": "1.0.0",
+    "description": "API that serves the boxsite",
+    "main": "index.js",
+    "repository": "https://github.com/raiot/boxsiteapi.git",
+    "author": "raiot",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND npm.homeawaycorp.com npm.homeawaycorp.com:443
+      at errnoException (dns.js:28:10)
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:73:26)

@@ -1,0 +1,18 @@
+{
+  "name": "boxsiteapi",
+  "version": "1.0.0",
+  "description": "API that serves the boxsite",
+  "main": "index.js",
+  "repository": "https://github.com/raiot/boxsiteapi.git",
+  "author": "raiot",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "devDependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.7",
+    "nodemon": "^1.11.0"
+  }
+}
