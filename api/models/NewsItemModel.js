@@ -16,7 +16,7 @@ var NewsItemSchema = new Schema({
     type: String,
     Required: 'Please enter the body of the news item'
   },
-  contentSnipet: {
+  contentSnippet: {
     type: String
   },
   img: {
