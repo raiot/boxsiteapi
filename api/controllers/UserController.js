@@ -57,6 +57,11 @@ exports.login = function(req, res) {
   })(req, res, next);
 };
 
+exports.logout = function (req, res) {
+    req.logout();
+    res.redirect('/');
+};
+
 exports.update = function(req, res) {
   Users.findOneAndUpdate(req.params.userId, req.body, {new: true}, function(err, user) {
     if (err)

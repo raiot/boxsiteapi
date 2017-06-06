@@ -7,6 +7,9 @@ module.exports = function(app) {
   app.route('/sign-in')
   .post(Users.create);
 
+  app.route('/logout')
+  .get(Users.logout);
+
 
   app.route('/users/manage/:userId')
     .put(Users.update)
