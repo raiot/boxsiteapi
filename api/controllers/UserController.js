@@ -1,15 +1,15 @@
 'use strict';
 
 
-let mongoose = require('mongoose'),
-    bcrypt = require('bcrypt'),
+var mongoose = require('mongoose'),
+    bcrypt = require('bcrypt-nodejs'),
     passport = require('passport'),
-  Users = mongoose.model('User');
+    Users = mongoose.model('User');
 
 
-Users.pre('save', function (next) {
-    let user = this;
-    let SALT_FACTOR = 5;
+Users.schema.pre('save', function (next) {
+    var user = this;
+    var SALT_FACTOR = 5;
 
     if(!user.isModified('password')) return next();
 
@@ -25,7 +25,7 @@ Users.pre('save', function (next) {
     });
 });
 
-Users.methods.comparePassword = function (candidatePassword, cb) {
+Users.schema.methods.comparePassword = function (candidatePassword, cb) {
     bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
         if (err) return next(err);
 

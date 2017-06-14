@@ -3,13 +3,14 @@ var express = require('express'),
   port = process.env.PORT || 3001,
   mongoose = require('mongoose'),
   NewsItems = require('./api/models/NewsItemModel'),
+  Users = require('./api/models/UserModel'),
   bodyParser = require('body-parser'),
   passport = require('passport'),
-  localStrategy = require('passport-local'),
+  LocalStrategy = require('passport-local'),
   cookieParser = require('cookie-parser'),
   logger = require('morgan'),
   session = require('express-session'),
-  config = require('config.js');
+  config = require('./config.js');
   
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://127.0.0.1/boxsitedb'); 
